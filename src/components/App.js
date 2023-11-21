@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import './../styles/App.css';
 
-import City from "./City";
+
 
 const App = () => {
     const cityList = [{ name: 'Goa', country: 'India' },
