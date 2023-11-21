@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import './../styles/App.css';
 
+import City from "./City";
+
 const App = () => {
     const cityList = [{ name: 'Goa', country: 'India' },
     { name: 'Amsterdam', country: 'Netherlands' },
@@ -32,10 +34,20 @@ const App = () => {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
+
+    const indianCities=cityList.filter(city=>city.country==="India");
     
   return (
     <div id="main">
-               {/* Do not remove the main div */}
+          <h1>hellow</h1>
+          
+          <ol>
+        {indianCities.map((city, index) =>(
+          <li key={`location-${index+1}`}>
+             {city.name};
+          </li>
+        ))}
+      </ol>
     </div>
   )
 }
